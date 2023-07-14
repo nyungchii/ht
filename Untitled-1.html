@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-image: linear-gradient(rgba(0,0,0,0.6) , rgba(0,0,0,0.6)) , url(images/header-image.png) ;
+            color: white;
+            font-family: 'Mitr', sans-serif;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav img{
+            margin: 24px 0 0 154px;
+            width: 150px;
+            height: auto;
+        }
+
+        .menu{
+            margin:20px 200px 0 0;
+        }
+
+        #language{
+            color: white;
+            background-color: rgba(0, 0, 0, .8) ;
+            border-radius: 5px;
+            padding: 5px 4px;
+            width: 120px;
+            height: auto;
+            text-align: center;
+            font-size: 1em;
+        }
+
+        #language:hover{
+            border: white 1px solid;
+        }
+
+
+        #language option{
+            background: white;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        nav button{
+            padding: 6px 10px;
+            border-radius: 5px;
+            font-size: 15px;
+            background: red;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        nav button , nav #language{
+            margin-left: 20px;
+        }
+
+        .headcontent{
+            text-align: center;
+            margin-top: 150px;
+            padding-bottom: 150px;
+        }
+
+        .headcontent h1{
+            font-size: 50px;
+        }
+
+        .h1text{
+            position: relative;
+            left: 170px;
+            width: 1000px;
+
+        }
+
+        .headcontent h2{
+            font-weight: lighter;
+            font-size: 22px;
+        }
+
+        .headcontent h1 , .headcontent h2{
+            margin-top: 20px;
+        }
+
+        .emailandstart{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .emailandstart input{
+            color: white;
+            background-color: rgba(31, 29, 29, 0.8) ;
+            border-radius: 4px;
+            border: gray solid 1px;
+            padding: 14px;
+            width: 400px;
+            height: auto;
+            font-size: 1em;
+        }
+
+        .emailandstart input::placeholder{
+            color: rgba(255,255,255,.8);
+        }
+
+        .start-btn{
+            margin-left: 8px;
+        }
+
+        .start-btn button{
+            padding: 10px;
+            width: 180px;
+            height: auto;
+            background-color: red;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .start-btn i{
+            position: relative;
+            bottom: 2.5px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 5px;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+
+        hr{
+            height: 10px;
+            width: auto;
+            background: rgb(45, 45, 45);
+            border: none;
+        }
+
+        .hr1{
+            box-shadow: 10px;
+        }
+
+        .content1{
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+        }
+
+        .content1 img{
+            width: 500px; 
+            height: auto;
+            margin-right: 100px;
+        }
+
+        .content1info{
+            margin-left: 100px;
+        }
+
+        .content1info h2{
+            font-weight: lighter;
+            font-size: 23px;
+        }
+
+        .content2{
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content2 img{
+            width: 500px; 
+            height: auto;
+            padding: 60px;
+        }
+
+        .content2info h2{
+            font-weight: lighter;
+            font-size: 23px;
+            width: 450px;
+        }
+
+        .content3{
+            background: #000;
+            padding: 80px;
+        }
+
+        .content3info{
+            margin-left: 250px;
+        }
+
+        .content3info h2{
+            font-weight: lighter;
+            font-size: 23px;
+            width: 350px;
+        }
+
+        .content4{
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content4 img{
+            width: 700px; 
+            height: auto;
+            padding: 60px;
+        }
+
+        .content4info h1{
+            width: 300px;
+        }
+
+        .content4info h2{
+            font-weight: lighter;
+            font-size: 23px;
+            width: 450px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="images/logo.png">
+            <div class="menu">
+                <select name="" id="language">
+                    <option value="">ไทย</option>
+                    <option value="">English</option>
+                </select>
+
+                <button>เข้าสู่ระบบ</button>
+            </div>
+        </nav>
+        <div class="headcontent">
+            <div class="headtext">
+                <div class="h1text">
+                    <h1>ภาพยนตร์ รายการทีวี และความบันเทิงอีกมากมายแบบไม่จำกัด</h1>
+                </div>
+                <h2>รับชมได้ทุกที่ ยกเลิกได้ทุกเมื่อ</h2>
+                <h2>หากพร้อมรับชม ป้อนอีเมลเพื่อสร้างหรือเริ่มต้นการเป็นสมาชิกอีกครั้ง</h2>
+            </div>
+            <div class="emailandstart">
+                <div class="email-form">
+                    <input type="email" placeholder="ที่อยู่อีเมล">
+                </div>
+                <div class="start-btn">
+                    <button>เริ่มต้นใช้งาน <i class="arrow"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+     <hr class="hr1">
+
+    <div class="content1">
+        <div class="content1info">
+            <h1>รับชมได้ในทีวี</h1>
+            <h2>รับชมได้ในสมาร์ททีวี Playstation, Xbox, Chromecast, Apple TV เครื่องเล่น Blu-ray และอีกมากมาย</h2>
+        </div>
+        <img src="images/feature-1.png" alt="">
+    </div>
+
+    <hr>
+    
+    <div class="content2">
+        <img src="images/feature-2.png" alt="">
+        <div class="content2info">
+            <h1>ดาวน์โหลดเนื้อหาไว้รับชมออฟไลน์</h1>
+            <h2>บันทึกเนื้อหาโปรดได้ง่ายๆ และมีความบันเทิงพร้อมให้รับชมอยู่เสมอ</h2>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="content3">
+        <div class="content3info">
+            <h1>รับชมได้ทุกที่</h1>
+            <h2>สตรีมภาพยนตร์และรายการทีวีได้ไม่จำกัดในโทรศัพท์ แท็บเล็ต แล็ปท็อป และทีวี</h2>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="content4">
+        <img src="images/feature-4.png" alt="">
+        <div class="content4info">
+            <h1>สร้างโปรไฟล์สำหรับเด็ก</h1>
+            <h2>เปิดโลกแห่งการผจญภัยให้บุตรหลานด้วยตัวละครโปรดในโปรไฟล์มุมเด็กที่คุณจะใช้งานได้ฟรีเมื่อสมัครสมาชิก</h2>
+        </div>
+    </div>
+</body>
+</html>
